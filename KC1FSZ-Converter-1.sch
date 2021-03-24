@@ -356,17 +356,6 @@ Text GLabel 10700 4350 2    50   Input ~ 0
 TX_OUT
 Wire Wire Line
 	10350 4350 10700 4350
-$Comp
-L power:+5VA #PWR0108
-U 1 1 605D305C
-P 9200 2500
-F 0 "#PWR0108" H 9200 2350 50  0001 C CNN
-F 1 "+5VA" H 9215 2673 50  0000 C CNN
-F 2 "" H 9200 2500 50  0001 C CNN
-F 3 "" H 9200 2500 50  0001 C CNN
-	1    9200 2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9200 2500 9200 3450
 Wire Wire Line
@@ -581,25 +570,10 @@ Text GLabel 4350 6100 0    50   Input ~ 0
 LO_IN
 Wire Wire Line
 	4350 6100 4850 6100
-$Comp
-L Connector_Generic:Conn_02x02_Odd_Even J3
-U 1 1 605FA873
-P 7050 5800
-F 0 "J3" H 7100 6017 50  0000 C CNN
-F 1 "Conn_02x02_Odd_Even" H 7100 5926 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 7050 5800 50  0001 C CNN
-F 3 "~" H 7050 5800 50  0001 C CNN
-	1    7050 5800
-	1    0    0    -1  
-$EndComp
-Text GLabel 6300 5800 0    50   Input ~ 0
+Text GLabel 6300 5700 0    50   Input ~ 0
 TX_OUT
-Wire Wire Line
-	6300 5800 6850 5800
-Text GLabel 6350 5900 0    50   Input ~ 0
+Text GLabel 6400 5800 0    50   Input ~ 0
 RX_IN
-Wire Wire Line
-	6350 5900 6850 5900
 $Comp
 L power:GNDA #PWR0116
 U 1 1 60600823
@@ -724,4 +698,70 @@ F 3 "~" H 6500 2500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6150 2400 6500 2400
+$Comp
+L power:+5VD #PWR0108
+U 1 1 606BD494
+P 9200 2500
+F 0 "#PWR0108" H 9200 2350 50  0001 C CNN
+F 1 "+5VD" H 9215 2673 50  0000 C CNN
+F 2 "" H 9200 2500 50  0001 C CNN
+F 3 "" H 9200 2500 50  0001 C CNN
+	1    9200 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 606C3C2E
+P 7050 5800
+F 0 "J3" H 7100 6117 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 7100 6026 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 7050 5800 50  0001 C CNN
+F 3 "~" H 7050 5800 50  0001 C CNN
+	1    7050 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5VD #PWR0118
+U 1 1 606C4CD1
+P 6350 6200
+F 0 "#PWR0118" H 6350 6050 50  0001 C CNN
+F 1 "+5VD" H 6365 6373 50  0000 C CNN
+F 2 "" H 6350 6200 50  0001 C CNN
+F 3 "" H 6350 6200 50  0001 C CNN
+	1    6350 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 6200 6350 6350
+Wire Wire Line
+	7350 5700 7700 5700
+Wire Wire Line
+	7700 5700 7700 5800
+Connection ~ 7700 5800
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 606CABEC
+P 6050 6200
+F 0 "#FLG0103" H 6050 6275 50  0001 C CNN
+F 1 "PWR_FLAG" H 6050 6373 50  0000 C CNN
+F 2 "" H 6050 6200 50  0001 C CNN
+F 3 "~" H 6050 6200 50  0001 C CNN
+	1    6050 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 6200 6050 6350
+Wire Wire Line
+	6050 6350 6350 6350
+Text Notes 8400 2200 0    50   ~ 10
+NOTICE: This amplifier uses a different power rail!
+Wire Wire Line
+	6300 5700 6850 5700
+Wire Wire Line
+	6400 5800 6850 5800
+Wire Wire Line
+	6350 6350 6850 6350
+Wire Wire Line
+	6850 6350 6850 5900
+Connection ~ 6350 6350
 $EndSCHEMATC
